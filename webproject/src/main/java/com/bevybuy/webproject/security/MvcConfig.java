@@ -12,7 +12,7 @@ public class MvcConfig implements WebMvcConfigurer {
         //Map the browser's URL to a specific View (HTML) inside resources/templates directory
         //registry.addViewController("/").setViewName("index");
         //registry.addViewController("/index").setViewName("index");
-        //registry.addViewController("/aboutus").setViewName("aboutus");
+        registry.addViewController("/aboutus").setViewName("aboutus");
         registry.addViewController("/products").setViewName("products");
     }
 
