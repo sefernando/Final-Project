@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
 
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,8 @@
 </head>
 
 <body>
+    <div th:insert="fragments/navbar.html :: navbar"></div>
+
     <div class="container p-5 " id="formSeller">
         <form onSubmit="event.preventDefault(); addForm();">
 
@@ -227,7 +229,7 @@
 
 
 
-
+    <div th:insert="fragments/footer.html :: footer"></div>
 
 
 
