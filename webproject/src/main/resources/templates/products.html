@@ -58,7 +58,7 @@
       <div class="search-area-wrapper">
         <p class="icon"><span>Ready to buy</span></p>
         <!-- action="#" method="GET" -->
-        <form id="productForm" onSubmit="event.preventDefault();">
+        <form id="productForm" onSubmit="event.preventDefault();" action="#" method="get">
           <label for="area"></label>
 
           <input
@@ -112,13 +112,21 @@
             id="search-btn"
             class="btn-primary"
           />
+
+
+          <!-- to display error msg-->
+          <div id="error-wrapper">
+            <i id="error-icon" class=""></i>
+            <small id="error"></small>
+          </div>
+
           <!-- value="send" -->
         </form>
         <!-- to display error msg-->
-        <div id="error-wrapper">
-          <i id="error-icon" class=""></i>
-          <small id="error"></small>
-        </div>
+<!--        <div id="error-wrapper">-->
+<!--          <i id="error-icon" class=""></i>-->
+<!--          <small id="error"></small>-->
+<!--        </div>-->
       </div>
     </section>
     <!-- Search Area ends-->
@@ -193,22 +201,23 @@
 
     <!-- ############################################################### -->
     <!-- modal for the product items -->
+
     <div
-      class="modal fade"
-      id="productModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
+            class="modal fade"
+            id="productModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="modalName">Item name</h5>
             <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
             >
               <span aria-hidden="true">&times;</span>
             </button>
@@ -218,72 +227,72 @@
 
             <!-- carousell -->
             <div
-              id="carouselExampleIndicators"
-              class="carousel slide"
-              data-ride="carousel"
+                    id="carouselExampleIndicators"
+                    class="carousel slide"
+                    data-ride="carousel"
             >
               <ol class="carousel-indicators">
                 <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="0"
-                  class="active"
+                        data-target="#carouselExampleIndicators"
+                        data-slide-to="0"
+                        class="active"
                 ></li>
                 <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="1"
+                        data-target="#carouselExampleIndicators"
+                        data-slide-to="1"
                 ></li>
                 <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="2"
+                        data-target="#carouselExampleIndicators"
+                        data-slide-to="2"
                 ></li>
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img
-                    id="first-image"
-                    class="d-block w-100 modelImg"
-                    src="./images/dummy_images/jeremy-zero-9-qg-RN-3Rg-unsplash.jpg"
-                    alt="First slide"
+                          id="first-image"
+                          class="d-block w-100 modelImg"
+                          src="./images/dummy_images/jeremy-zero-9-qg-RN-3Rg-unsplash.jpg"
+                          alt="First slide"
                   />
                 </div>
                 <div class="carousel-item modelImg">
                   <img
-                    id="second-image"
-                    class="d-block w-100"
-                    src="./images/dummy_images/francois-hoang-gYVNvRygCUw-unsplash.jpg"
-                    alt="Second slide"
+                          id="second-image"
+                          class="d-block w-100"
+                          src="./images/dummy_images/francois-hoang-gYVNvRygCUw-unsplash.jpg"
+                          alt="Second slide"
                   />
                 </div>
                 <div class="carousel-item modelImg">
                   <img
-                    id="third-image"
-                    class="d-block w-100"
-                    src="./images/dummy_images/patrick-schneider-87oz2SoV9Ug-unsplash.jpg"
-                    alt="Third slide"
+                          id="third-image"
+                          class="d-block w-100"
+                          src="./images/dummy_images/patrick-schneider-87oz2SoV9Ug-unsplash.jpg"
+                          alt="Third slide"
                   />
                 </div>
               </div>
               <a
-                class="carousel-control-prev"
-                href="#carouselExampleIndicators"
-                role="button"
-                data-slide="prev"
+                      class="carousel-control-prev"
+                      href="#carouselExampleIndicators"
+                      role="button"
+                      data-slide="prev"
               >
                 <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
                 ></span>
                 <span class="sr-only">Previous</span>
               </a>
               <a
-                class="carousel-control-next"
-                href="#carouselExampleIndicators"
-                role="button"
-                data-slide="next"
+                      class="carousel-control-next"
+                      href="#carouselExampleIndicators"
+                      role="button"
+                      data-slide="next"
               >
                 <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
                 ></span>
                 <span class="sr-only">Next</span>
               </a>
@@ -295,7 +304,9 @@
               <b>Delivery Method:</b>
               <span id="modalDelivaryMethod">modelInput</span>
             </p>
-            <p><b>Min Quantity:</b> <span id="modalMinQty">modelInput</span></p>
+            <p>
+              <b>Min Quantity:</b> <span id="modalMinQty">modelInput</span> pcs
+            </p>
             <p>
               <b>Seller Name:</b>
               <span id="modalSellerDetails">modelInput</span>
@@ -304,15 +315,47 @@
 
           <!-- model body ends -->
           <div class="modal-footer">
+            <!-- model to join the group email -->
+            <div id="model-mail-list">
+              <form class="form-inline justify-content-center">
+                <!-- <label class="sr-only" for="yourEmail">Email</label> -->
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                  <div class="input-group-addon"></div>
+                  <input
+                          type="email"
+                          class="form-control"
+                          id="yourEmail"
+                          placeholder="Your Email"
+                  />
+                </div>
+                <button
+                        id="sign-up-button"
+                        type="button"
+                        data-dismiss="modal"
+                        class="btn btn-primary my-2 my-sm-0"
+                >
+                  Sign Up
+                </button>
+              </form>
+            </div>
+            <!-- model to join the group email ends -->
+            <div id="join-the-group-div">
+              <button
+                      id="join-btn"
+                      type="button"
+                      class="btn btn-primary toggle-button"
+              >
+                Join the Group
+              </button>
+            </div>
+
             <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
+                    id="close-button"
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
             >
               Close
-            </button>
-            <button id="join-btn" type="button" class="btn btn-primary">
-              Join the group
             </button>
           </div>
         </div>
@@ -345,7 +388,7 @@
     <script src="./JS/inputFieldValidate.js"></script>
     <script src="./JS/ProductController.js"></script>
     <script src="./JS/productService.js"></script>
-    <script src="./JS/goToTopButton.js"></script>
+    <script src="./JS/utilities.js"></script>
 
 <!--        <script th:src="@{/JS/inputFieldValidate.js}"></script>-->
 <!--        <script th:src="@{/JS/ProductController.js}"></script>-->
