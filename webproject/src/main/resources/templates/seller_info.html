@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +12,7 @@
 </head>
 <body>
 
+    <div th:insert="fragments/navbar.html :: navbar"></div>
 
     <div class="container">
         <div class="row">
@@ -20,7 +21,7 @@
                 <h1>Become our Partner.</h1>
                 <h1>Join us as Community Organizers or Sellers.</h1>
                 <h3>Spread the joy!</h3>
-                <button a href="bevybuy/seller_reg.html" type="button" class="btn btn-primary w-75">Register as Seller</button> <br><br>
+                <button a href="/seller_reg.html" type="button" class="btn btn-primary w-75">Register as Seller</button> <br><br>
                 <button type="button" class="btn btn-primary w-75">Register as Community Organizer</button>
             </div>
             <div class="col-md-6">
@@ -99,7 +100,7 @@
 
 
 
-
+    <div th:insert="fragments/footer.html :: footer"></div>
 
 
     <!--Scripts-->

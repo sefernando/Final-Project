@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+    <div th:insert="fragments/navbar.html :: navbar"></div>
    
     <div class="mx-auto text-center">
         <h1> Your application has been submitted.</h1><br>
@@ -23,7 +23,7 @@
         <a class="btn btn-primary m-2" href="#" type="button">OK</a>
     </div>
 
-
+    <div th:insert="fragments/footer.html :: footer"></div>
 </body>
 
 </html>

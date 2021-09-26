@@ -109,7 +109,7 @@ function addForm() {
         
         console.log("Form is submitted");
         alert('Form Succesfully Submitted');
-        window.location.replace("http://127.0.0.1:5501/bevybuy/seller_completeReg.html#")
+        window.location.replace("/seller_completeReg.html")
         return true;
 
 
