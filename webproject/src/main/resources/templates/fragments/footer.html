@@ -14,7 +14,7 @@
 
         <div class="col-md-3">
             <img
-                    src=" images/Logos/logo_transparent_background.png"
+                    src="images/aboutUs/logo_transparent_background.png"
                     width="40%"
                     class="mb-3"
             />
@@ -28,16 +28,19 @@
             <h4>MAIN MENU</h4>
             <ul class="list-unstyled">
                 <li>
-                    <a href="#">Home</a>
+                    <a th:href="@{homepage}">Home</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a th:href="@{aboutus}">About</a>
                 </li>
                 <li>
-                    <a href="#">Products</a>
+                    <a th:href="@{products}">Products</a>
                 </li>
                 <li>
-                    <a href="#">Seller</a>
+                    <a th:href="@{seller_reg}">Seller Registration</a>
+                </li>
+                <li>
+                    <a th:href="@{seller_info}">Seller FAQ</a>
                 </li>
             </ul>
         </div>
