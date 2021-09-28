@@ -1,7 +1,6 @@
 package com.bevybuy.webproject.service;
 
 import com.bevybuy.webproject.repository.ProductRepository;
-import com.bevybuy.webproject.repository.SellerRepository;
 import com.bevybuy.webproject.repository.entity.Product;
 import com.bevybuy.webproject.repository.entity.Seller;
 import org.springframework.stereotype.Service;
@@ -11,14 +10,13 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ProductServiceMySQL implements ProductService, SellerService {
+public class ProductServiceMySQL implements ProductService {
 
     private final ProductRepository productRepository;
-    private final SellerRepository sellerRepository;
+   // private final SellerRepository sellerRepository;
 
-    public ProductServiceMySQL(ProductRepository productRepository, SellerRepository sellerRepository) {
+    public ProductServiceMySQL(ProductRepository productRepository) {
         this.productRepository = productRepository;
-        this.sellerRepository = sellerRepository;
     }
 
     @Override
@@ -26,10 +24,10 @@ public class ProductServiceMySQL implements ProductService, SellerService {
         return this.productRepository.save(product);
     }
 
-    @Override
-    public Seller save(Seller seller) {
-        return this.sellerRepository.save(seller);
-    }
+//    @Override
+//    public Seller save(Seller seller) {
+//        return this.sellerRepository.save(seller);
+//    }
 
     @Override
     public void delete(Integer productId) {

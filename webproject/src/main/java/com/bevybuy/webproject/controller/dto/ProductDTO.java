@@ -18,11 +18,10 @@ public class ProductDTO {
     private String areaCode;    //area;
     private String delivery;    //deliveryServices;
 
-    //SELLERDTO INSTANCE
-    //private SellerDTO sellerDTO;
+    private Seller seller;
 
     public ProductDTO(String itemName, String description, Double price, Double discount, String imageUrl1, String imageUrl2, String imageUrl3,
-                      Integer minQty, Integer offerPeriod, String effectiveDate, String organizer, String areaCode, String delivery ) {
+                      Integer minQty, Integer offerPeriod, String effectiveDate, String organizer, String areaCode, String delivery, Seller seller) {
         this.itemName = itemName;
         this.description = description;
         this.price = price;
@@ -36,7 +35,7 @@ public class ProductDTO {
         this.organizer = organizer;
         this.areaCode = areaCode;
         this.delivery = delivery;
-
+        this.seller = seller;
 
     }
 
@@ -143,7 +142,5 @@ public class ProductDTO {
     public void setDelivery(String delivery) {
         this.delivery = delivery;
     }
-
-    //GETTER SETTER FOR SELLERDTO
 
 }

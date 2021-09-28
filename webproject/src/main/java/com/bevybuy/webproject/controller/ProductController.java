@@ -1,28 +1,32 @@
 package com.bevybuy.webproject.controller;
 
 
+import com.bevybuy.webproject.component.FileUploadUtil;
 import com.bevybuy.webproject.controller.dto.ProductDTO;
 import com.bevybuy.webproject.controller.dto.SellerDTO;
 import com.bevybuy.webproject.repository.entity.Product;
 import com.bevybuy.webproject.repository.entity.Seller;
 import com.bevybuy.webproject.service.ProductService;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @RequestMapping("/item")
 public class ProductController {
 
+    @Value("${image.folder}")
+    private String imageFolder;
 
     final ProductService productService;
+
 
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
-
 
     @CrossOrigin
     @GetMapping("/all")
@@ -31,8 +35,14 @@ public class ProductController {
     }
 
     @CrossOrigin
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Integer id) {
+        productService.delete(id);
+    }
+
+    @CrossOrigin
     @PostMapping("/add")
-    public /*Product*/ List<Object> save(
+    public Product /*List<Object>*/ save(
             // PRODUCT INFO
             @RequestParam(name="itemName") String itemName,
             @RequestParam(name="description") String description,
@@ -56,27 +66,32 @@ public class ProductController {
             @RequestParam(name="postalCode") String postalCode,
             @RequestParam(name="email") String email,
             @RequestParam(name="comDescription") String comDescription,
-            @RequestParam(name="referralCode") String referralCode
+            @RequestParam(name="referralCode") String referralCode,
+
+            //Images
+            @RequestParam("imageObj1") MultipartFile mpf1,
+            @RequestParam("imageObj2") MultipartFile mpf2,
+            @RequestParam("imageObj3") MultipartFile mpf3
 
     ) throws IOException {
-        //
-        //todo handle image files
-        //
 
-        ProductDTO productDTO = new ProductDTO(itemName, description, price, discount, imageUrl1, imageUrl2,
-                                    imageUrl3, minQty, offerPeriod, effectiveDate, organizer, areaCode, delivery);
-        Product productResponse = productService.save(new Product(productDTO));
+        //todo handle image files
+        //saving images to the local directory
+        String fileName1 = StringUtils.cleanPath(mpf1.getOriginalFilename());
+        String fileName2 = StringUtils.cleanPath(mpf2.getOriginalFilename());
+        String fileName3 = StringUtils.cleanPath(mpf3.getOriginalFilename());
+        FileUploadUtil.saveFile(imageFolder, fileName1, fileName2, fileName3, mpf1, mpf2, mpf3);
 
 
         SellerDTO sellerDTO = new SellerDTO(fullName, sellerInfo, address1, address2, postalCode, email, comDescription, referralCode);
-        Seller sellerResponse = productService.save(new Seller(sellerDTO));
-        //Seller sellerResponse = sellerService.save(new Seller(sellerDTO));
+        Seller seller = new Seller(sellerDTO);
 
-        List<Object> arrList = new ArrayList<>();
-        arrList.add(productResponse);
-        //arrList.add(sellerResponse);
-        return arrList;
+        ProductDTO productDTO = new ProductDTO(itemName, description, price, discount, imageUrl1, imageUrl2,
+                                    imageUrl3, minQty, offerPeriod, effectiveDate, organizer, areaCode, delivery, seller);
 
+        Product productResponse = productService.save(new Product(productDTO, seller));
+        System.out.println(productResponse);
+        return productResponse;
 
     }
 

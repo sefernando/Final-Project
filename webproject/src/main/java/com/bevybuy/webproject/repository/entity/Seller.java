@@ -11,6 +11,7 @@ public class Seller {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "sellerId")
     private Integer sellerId;
 
     private String fullName;
@@ -36,7 +37,7 @@ public class Seller {
     }
 
     //PRODUCT Mapping
-//    @OneToMany(mappedBy = "seller")
+//    @OneToMany( fetch = FetchType.EAGER, mappedBy = "seller")
 //    private List<Product> products = new ArrayList<>();
 //
 //    public List<Product> getProducts() {

@@ -9,7 +9,7 @@ public interface ProductService {
 
     Product save(Product product);
 
-    Seller save(Seller seller);
+    //Seller save(Seller seller);
 
     void delete(Integer productId);
 

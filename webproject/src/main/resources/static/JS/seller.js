@@ -20,13 +20,14 @@ document.querySelector("#inputCompanyDescription").value = "Tan Ah Kow is a fake
 
 
 
-
 const formList = [];
 let checkboxChecked = [];
 let isChecked = false;
 let isRadioSelected = false;
 let delivery = "";
 const checkboxes = document.querySelectorAll("input[type=checkbox]");
+
+
 
 
 function addForm() {
@@ -115,6 +116,8 @@ function addForm() {
 
 
         addToList(name, company, address, addressUnit, addressPostal, email, mobileNum, itemCategory, itemDescription, listPrice, GroupDiscount, minQty, offerPeriod, effectiveDate, CommunityOrgz, referralCode, CompanyDescription, selectArea, deliveryServices, imagesSeller1, imagesSeller2, imagesSeller3, itemValue);
+
+
     }
 }
 

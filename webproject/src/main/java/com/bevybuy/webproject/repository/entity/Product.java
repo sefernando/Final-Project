@@ -29,15 +29,18 @@ public class Product {
 
     //SELLER MAPPING
     @ManyToOne(
-            //cascade = CascadeType.ALL,
+            cascade = CascadeType.ALL,
             fetch = FetchType.EAGER
     )
-    @JoinColumn(
-            name = "seller_id",
-            referencedColumnName = "sellerId"
-            //nullable = false
-    )
+    @JoinColumn(name = "sellerId", referencedColumnName ="sellerId")
     private Seller seller;
+
+    /*@JoinColumn(
+            name = "seller_id",
+            referencedColumnName = "sellerId",
+            nullable = false
+    )*/
+    //private Seller seller;
 
     public Seller getSeller() {
         return seller;
@@ -46,11 +49,18 @@ public class Product {
     public void setSeller(Seller seller) {
         this.seller = seller;
     }
-    /////////////////////////////////////////////
+
+
+//    public Integer getSellerId() {
+//        return seller.getSellerId();
+//    }
+
+
+/////////////////////////////////////////////
 
     public Product() {}
 
-    public Product(ProductDTO productDTO) {
+    public Product(ProductDTO productDTO, Seller seller) {
         this.itemName = productDTO.getItemName();
         this.description = productDTO.getDescription();
         this.price = productDTO.getPrice();
@@ -64,8 +74,7 @@ public class Product {
         this.organizer = productDTO.getOrganizer();
         this.areaCode = productDTO.getAreaCode();
         this.delivery = productDTO.getDelivery();
-
-
+        this.seller = seller;
     }
 
     public Integer getProductId() {
@@ -109,7 +118,7 @@ public class Product {
     }
 
     public String getImageUrl1() {
-        return imageUrl1;
+        return "/productImages/" + imageUrl1;
     }
 
     public void setImageUrl1(String imageUrl1) {
@@ -117,7 +126,7 @@ public class Product {
     }
 
     public String getImageUrl2() {
-        return imageUrl2;
+        return "/productImages/" + imageUrl2;
     }
 
     public void setImageUrl2(String imageUrl2) {
@@ -125,7 +134,7 @@ public class Product {
     }
 
     public String getImageUrl3() {
-        return imageUrl3;
+        return "/productImages/" + imageUrl3;
     }
 
     public void setImageUrl3(String imageUrl3) {

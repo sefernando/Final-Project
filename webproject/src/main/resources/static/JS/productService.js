@@ -7,109 +7,116 @@ const productController = new ProductController();
 
 
 //************ to delete **************/
+
+
+
 //adding hardcorded product values
-productController.addItem(
-  "ipad",
-  "Some quick example text to build on the card title.",
-  "https://source.unsplash.com/1600x900/?ipad-12.9",
-  "https://source.unsplash.com/1600x900/?ipad-mini",
-  "https://source.unsplash.com/1600x900/?ipad",
-  "10.0034",
-  "10",
-  "3",
-  "Deliver to individual buyers",
-  "100",
-  "anthony",
-  "D01",
-  "2021-10-20"
-);
+//productController.addItem(
+//  "ipad",
+//  "Some quick example text to build on the card title.",
+//  "https://source.unsplash.com/1600x900/?ipad-12.9",
+//  "https://source.unsplash.com/1600x900/?ipad-mini",
+//  "https://source.unsplash.com/1600x900/?ipad",
+//  "10.0034",
+//  "10",
+//  "3",
+//  "Deliver to individual buyers",
+//  "100",
+//  "anthony",
+//  "D01",
+//  "2021-10-20"
+//);
+//
+//productController.addItem(
+//  "iphone",
+//  "Some quick example.",
+//  "https://source.unsplash.com/1600x900/?iphone",
+//  "https://source.unsplash.com/1600x900/?iphone8",
+//  "https://source.unsplash.com/1600x900/?iphonex",
+//  "20.00",
+//  "5",
+//  "4",
+//  "community organizer",
+//  "200",
+//  "fernando",
+//  "D02",
+//  "2021-09-20"
+//);
+//
+//productController.addItem(
+//  "food",
+//  "Some quick example text to build on the card title and make up the bulk of the card's content the bulk of the card's content.",
+//  "https://source.unsplash.com/1600x900/?rice",
+//  "https://source.unsplash.com/1600x900/?fruit",
+//  "https://source.unsplash.com/1600x900/?vegetables",
+//  "4",
+//  "12",
+//  "5",
+//  "Deliver to community organizer or central location",
+//  "10",
+//  "anthony",
+//  "D01",
+//  "2021-09-12"
+//);
+//
+//productController.addItem(
+//  "baby pram",
+//  "Some quick example text to build on the card title ank of the card's content.",
+//
+//  "https://source.unsplash.com/1600x900/?baby-clothes",
+//  "https://source.unsplash.com/1600x900/?mittens",
+//  "https://source.unsplash.com/1600x900/?baby-pram",
+//
+//  "210.00",
+//  "4",
+//  "6",
+//  "Pick up by the individual buyer or community organizer",
+//  "50",
+//  "lydia",
+//  "D01",
+//  "2021-08-30"
+//);
+//
+//productController.addItem(
+//  "bicycle",
+//  "Some quick example text to build on the card title and make up.",
+//
+//  "https://source.unsplash.com/1600x900/?bicycle",
+//  "https://source.unsplash.com/1600x900/?bmw-bike",
+//  "https://source.unsplash.com/1600x900/?kids-bike",
+//
+//  "90.00",
+//  "3",
+//  "8",
+//  "organizer",
+//  "25",
+//  "hazrul",
+//  "D02",
+//  "2021-09-20"
+//);
+//
+////expired item
+//productController.addItem(
+//  "test expired",
+//  "Some quick example text to build on the card title ank of the card's content.",
+//
+//  "https://source.unsplash.com/1600x900/?baby-clothes",
+//  "https://source.unsplash.com/1600x900/?mittens",
+//  "https://source.unsplash.com/1600x900/?baby-pram",
+//
+//  "210.00",
+//  "10",
+//  "4",
+//  "central location",
+//  "50",
+//  "lydia",
+//  "D01",
+//  "2021-06-30"
+//);
 
-productController.addItem(
-  "iphone",
-  "Some quick example.",
-  "https://source.unsplash.com/1600x900/?iphone",
-  "https://source.unsplash.com/1600x900/?iphone8",
-  "https://source.unsplash.com/1600x900/?iphonex",
-  "20.00",
-  "5",
-  "4",
-  "community organizer",
-  "200",
-  "fernando",
-  "D02",
-  "2021-09-20"
-);
 
-productController.addItem(
-  "food",
-  "Some quick example text to build on the card title and make up the bulk of the card's content the bulk of the card's content.",
-  "https://source.unsplash.com/1600x900/?rice",
-  "https://source.unsplash.com/1600x900/?fruit",
-  "https://source.unsplash.com/1600x900/?vegetables",
-  "4",
-  "12",
-  "5",
-  "Deliver to community organizer or central location",
-  "10",
-  "anthony",
-  "D01",
-  "2021-09-12"
-);
 
-productController.addItem(
-  "baby pram",
-  "Some quick example text to build on the card title ank of the card's content.",
 
-  "https://source.unsplash.com/1600x900/?baby-clothes",
-  "https://source.unsplash.com/1600x900/?mittens",
-  "https://source.unsplash.com/1600x900/?baby-pram",
-
-  "210.00",
-  "4",
-  "6",
-  "Pick up by the individual buyer or community organizer",
-  "50",
-  "lydia",
-  "D01",
-  "2021-08-30"
-);
-
-productController.addItem(
-  "bicycle",
-  "Some quick example text to build on the card title and make up.",
-
-  "https://source.unsplash.com/1600x900/?bicycle",
-  "https://source.unsplash.com/1600x900/?bmw-bike",
-  "https://source.unsplash.com/1600x900/?kids-bike",
-
-  "90.00",
-  "3",
-  "8",
-  "organizer",
-  "25",
-  "hazrul",
-  "D02",
-  "2021-09-20"
-);
-
-//expired item
-productController.addItem(
-  "test expired",
-  "Some quick example text to build on the card title ank of the card's content.",
-
-  "https://source.unsplash.com/1600x900/?baby-clothes",
-  "https://source.unsplash.com/1600x900/?mittens",
-  "https://source.unsplash.com/1600x900/?baby-pram",
-
-  "210.00",
-  "10",
-  "4",
-  "central location",
-  "50",
-  "lydia",
-  "D01",
-  "2021-06-30"
-);
 
 // create HTML element and return the card
 const createHTMLCard = (linkID, item, expireDay, sellingPrice) => `
@@ -221,7 +228,9 @@ function displayProductDetails(item) {
   document.getElementById("third-image").src = item.imageUrl3;
   document.getElementById("modalDelivaryMethod").innerText = item.delivery;
   document.getElementById("modalMinQty").innerText = item.minQty;
-  document.getElementById("modalSellerDetails").innerText = item.sellerInfo;
+  //document.getElementById("modalSellerDetails").innerText = item.sellerInfo;
+  document.getElementById("modalSellerDetails").innerText = item.seller.sellerInfo;
+
 }
 
 //////calculate date validity

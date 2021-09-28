@@ -37,7 +37,7 @@ class ProductController {
   }
 
   //todo use this addItem method to POST data. delete the above one
-  // addItem(itemName, description, price, discount, imageUrl1, imageUrl2, imageUrl3,
+  //addItem(itemName, description, price, discount, imageUrl1, imageUrl2, imageUrl3,
   //   minQty, offerPeriod, effectiveDate, organizer, areaCode, delivery, fullName,
   //   sellerInfo, address1, address2, postalCode, email, comDescription, referralCode,
   //   imageObj1, imageObj2, imageObj3
@@ -92,21 +92,22 @@ class ProductController {
 
     //return statement instead on this._items
 
-    // let itemController = this;
-    // itemController._items = [];
+     let itemController = this;
+     itemController._items = [];
 
-    // fetch('http://localhost:8080/item/all')
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     console.log('items', data);
-    //     //todo check if data is in two array of objects. handle accordingly
-    //     itemController._items.push(...data);
+     fetch('http://localhost:8081/item/all')
+       .then(response => response.json())
+       .then(data => {
+         console.log('print test fetch items', data);
+         //todo check if data is in two array of objects. handle accordingly
+         itemController._items.push(...data);
 
-    //   })
-    //   .catch(e => console.log(e));
+       })
+       .catch(e => console.log(e));
     //*********** added new part *******************/
 
-    return this._items.filter(item => item.areaCode === districtCode);
+    console.log("this._items", this._items)
+    return this._items //.filter(item => item.areaCode === districtCode);
   }
 
 
