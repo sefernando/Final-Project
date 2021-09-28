@@ -69,7 +69,43 @@ formSeller.addEventListener('submit', (event) => {
     // function addForm() {
 
 
+<<<<<<< HEAD
     
+=======
+const formList = [];
+let checkboxChecked = [];
+let isChecked = false;
+let isRadioSelected = false;
+let delivery = "";
+const checkboxes = document.querySelectorAll("input[type=checkbox]");
+
+
+
+
+function addForm() {
+
+    console.log("In the function");
+    const name = document.querySelector("#inputName").value;
+    const company = document.querySelector("#inputCompany").value;
+    const address = document.querySelector("#inputAddr").value;
+    const addressUnit = document.querySelector("#inputAddrUnit").value;
+    const addressPostal = document.querySelector("#inputAddrPostal").value;
+    const email = document.querySelector("#inputEmail").value;
+    const mobileNum = document.querySelector("#inputMobileNum").value;
+    const itemCategory = document.querySelector("#inputItemCategory").value;
+    const itemDescription = document.querySelector("#inputItemDescription").value;
+    const listPrice = document.querySelector("#inputListPrice").value;
+    const GroupDiscount = document.querySelector("#inputGroupDiscount").value;
+    const imagesSeller1 = document.getElementById("imageSeller1").value;
+    const imagesSeller2 = document.getElementById("imageSeller2").value;
+    const imagesSeller3 = document.getElementById("imageSeller3").value;
+    const minQty = document.querySelector("#inputMinQty").value;
+    const offerPeriod = document.querySelector("#inputOfferPeriod").value;
+    const effectiveDate = document.querySelector("#inputEffectiveDate").value;
+    const CommunityOrgz = document.querySelector("#inputCommunityOrgz").value;
+    const referralCode = document.querySelector("#inputReferralCode").value;
+    const CompanyDescription = document.querySelector("#inputCompanyDescription").value;
+>>>>>>> dddc05cc7730b85034b674e7d2ea903df62a3e48
 
     //For the drop down menus======================================
     // const itemValue = newinputItemCategory.value;
@@ -182,6 +218,14 @@ formSeller.addEventListener('submit', (event) => {
         //#what about the data on company?
         productController.addToList(itemName, description, imageUrl1, imageUrl2, imageUrl3, price, discount, offerPeriod,delivery,minQty, sellerInfo, areaCode, effectiveDate)
 
+<<<<<<< HEAD
+=======
+        addToList(name, company, address, addressUnit, addressPostal, email, mobileNum, itemCategory, itemDescription, listPrice, GroupDiscount, minQty, offerPeriod, effectiveDate, CommunityOrgz, referralCode, CompanyDescription, selectArea, deliveryServices, imagesSeller1, imagesSeller2, imagesSeller3, itemValue);
+
+
+    }
+}
+>>>>>>> dddc05cc7730b85034b674e7d2ea903df62a3e48
 
         console.log("Form is submitted");
         alert('Form Successfully Submitted');
@@ -310,4 +354,6 @@ const input3 = document.querySelector('#imageSeller3');
 input3.addEventListener('change', () => {
     storeImage = input.files[2];  
 });
+
+
 
