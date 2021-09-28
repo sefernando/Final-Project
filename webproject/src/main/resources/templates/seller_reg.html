@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="CSS/form.css">
 
     <title>Seller Registration</title>
 </head>
@@ -15,8 +15,8 @@
 <body>
     <div th:insert="fragments/navbar.html :: navbar"></div>
 
-    <div class="container p-5 " id="formSeller">
-        <form onSubmit="event.preventDefault(); addForm();">
+    <div class="container p-5 ">
+        <form id="formSeller" enctype="multipart/form-data">
 
             <div class="form-group">
                 <label for="inputName">Full Name:</label>
@@ -175,18 +175,18 @@
 
                     <div class="col-md" id="imagesSeller">Upload images of your product (*.jpg, *.png):
                         <div class="col-md-3">
-                            <label for="image1"></label>
-                            <input type="file" id="imageSeller1" name="imageSeller" accept="image/png, image/jpeg"
+                            <label for="imageSeller1"></label>
+                            <input type="file" id="imageSeller1" name="imageSeller1" accept="image/*" multiple
                                 required class="form-control-file">
                         </div>
                         <div class="col-md-3">
-                            <label for="image2"></label>
-                            <input type="file" id="imageSeller2" name="imageSeller" accept="image/png, image/jpeg"
+                            <label for="imageSeller2"></label>
+                            <input type="file" id="imageSeller2" name="imageSeller2" accept="image/*" multiple
                                 class="form-control-file">
                         </div>
                         <div class="col-md-3">
-                            <label for="image3"></label>
-                            <input type="file" id="imageSeller3" name="imageSeller" accept="image/png, image/jpeg"
+                            <label for="imageSeller3"></label>
+                            <input type="file" id="imageSeller3" name="imageSeller3" accept="image/*" multiple
                                 class="form-control-file">
                             <span id="Err"></span>
                         </div><br />
@@ -202,7 +202,6 @@
                 </select> <br><br />
                 <span id="Err"></span>
 
-                <!-- <input class="form-check-input" input type="checkbox" id="terms" name = "terms"> -->
                 
                 <!-- inserted -->
                 <input type="radio" id="radio_agree" name="terms" value="agree" required>
@@ -214,7 +213,7 @@
 
                 <button class="btn btn-primary m-2" id ="btn" type="submit">Submit</button>
                 <button class="btn btn-outline-secondary m-2" type="reset">Reset</button>
-
+            </div>
         </form>
     </div>
 
@@ -234,8 +233,9 @@
 
 
     <!--Scripts-->
-
-    <script src="seller.js"></script>
+    <script src="JS/ProductController.js"></script>
+    <script src="JS/seller.js"></script>
+  
 
 
 
