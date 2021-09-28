@@ -37,148 +37,170 @@
   <!-- End of NavBar -->
 
 
-          <!--Jumbotron component-->
-          <div class="row">
-              <div class="col">
-                  <div class="jumbotron bg-info text-center">
+  <!--- Image Slider -->
+  <div id="slides" class="carousel slide" data-ride-carousel>
+      <ul class="carousel-indicators">
+          <li data-target="#slides" data-slide-to="0" class="active"></li>
+          <li data-target="#slides" data-slide-to="1"></li>
+          <li data-target="#slides" data-slide-to="2"></li>
+      </ul>
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="images/homepage/background.png">
+              <div class="carousel-caption">
+                  <h1 class="display-2">BevyBuy</h1>
+                  <h3>Your one stop shop for group buy.</h3>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img src="images/homepage/background2.png">
+              <div class="carousel-caption">
+                  <h1 class="display-2">Explore the world of GroupBuy. </h1>
+                  <h3>Find your needs and Buy Together.</h3>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img src="images/homepage/background3.png">
+              <div class="carousel-caption">
+                  <h1 class="display-2">All at One Place</h1>
+                  <h3>With BevyBuy, GroupBuy just got easier.</h3>
+              </div>
+          </div>
 
-                        <h1 class="display-4 text-light">Buy Together. Bevybuy.</h1>
-                        <p class="lead text-light">Want something but it's too far away from you? Use BevyBuy.</p>
-                        <hr class="my-4">
-                        <p class="text-light">With BevyBuy, group buy just got easier. One place, for all</p>
-                        <a class="btn btn-light btn-lg" href="#" role="button">Buy now</a>
+      </div>
+  </div>
+
+  <!--- Welcome Section -->
+  <div class="container-fluid padding">
+      <div class="row welcome text-center">
+          <div class="col-12">
+              <h1 class"display-4">Why BevyBuy?</h1>
+              <hr>
+              <div class="col-12">
+                  <p class="lead">A little trip down memory lane</p>
+              </div>
+          </div>
+      </div>
+  </div>
 
 
-                      </div>
-            </div>
-        </div>
 
 
-              <!--Header component-->
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
+  <!--- Three Column Section -->
+  <div class="container-fluid padding">
+      <div class="row text-center padding">
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <i class="fas fa-phone"></i>
+              <h3>Accessibility</h3>
+              <p> GroupBuy is gaining popularity. We decided to make it more accessible for people to buy together</p>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <i class="fas fa-compass"></i>
+              <h3>Location</h3>
+              <p>Sometimes our needs are far-fetched. We decided to tackle that.</p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+              <i class="fas fa-dollar-sign"></i>
+              <h3>Spend Less</h3>
+              <p>With BevyBuy, you spend less, collectively. We believe in the power of people</p>
+          </div>
+      </div>
+      <hr class="my-4">
+  </div>
 
-                            <h1 class="display-5 text-center text-info"> Our best deals, just for you.</h1>
-                        </div>
-                    </div>
 
-            <!--Carousel component-->
-                    <div class="row">
-                        <div class="col">
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
+  <!--- Fixed background -->
+  <figure>
+      <div class="fixed-wrap">
+          <div id="fixed"></div>
+      </div>
+  </figure>
 
-                                    <div class="carousel-item active">
+  <!--- Featured Products-->
+  <div class="container-fluid padding">
+      <div class="row welcome text-center">
+          <div class="col-12">
+              <h1 class="display-4">Featured Products</h1>
+          </div>
+          <hr>
+      </div>
+  </div>
 
-                                        <img src="images/homepage/henry-perks-BJXAxQ1L7dI-unsplash copy.jpg" class="d-block w-100" alt="...">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h3>Buy an Iphone 13</h3>
-                                            <p>Starts at $1300</p>
-                                            <a href="#" class="btn btn-primary">Buy now</a>
-                                        </div>
-                                    </div>
-                        <div class="carousel-item">
-
-                            <img src="images/homepage/lucrezia-carnelos-wQ9VuP_Njr4-unsplash copy.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h3>Buy an Iphone 14</h3>
-                                <p>Starts at $1400</p>
-                                <a href="#" class="btn btn-primary">Buy now</a>
-                            </div>
-                        </div>
-
-                            <div class="carousel-item">
-                                <img src="images/homepage/thom-holmes-J2e34-1CVVs-unsplash copy.jpg" class="d-block w-100" alt="...">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h3>Buy an Iphone 15</h3>
-                                    <p>Starts at $1500</p>
-                                    <a href="#" class="btn btn-primary">Buy now</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!--More info-->
-            <h3 class="display-4 text-info text-center">Featured Products</h3>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-3">
-                      <div class="card">
-                          <img src="images/homepage/lucrezia-carnelos-wQ9VuP_Njr4-unsplash copy.jpg"  alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Iphone 13</h5>
-                          <p class="card-text">Coated with all that glitters is gold</p>
-                          <a href="#" class="btn btn-primary">Buy now</a>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-3">
-                      <div class="card">
-                          <img src="images/homepage/lucrezia-carnelos-wQ9VuP_Njr4-unsplash copy.jpg" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Iphone 13</h5>
-                            <p class="card-text">Coated with all that glitters is gold</p>
-                            <a href="#" class="btn btn-primary">Buy now</a>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <img src="images/homepage/lucrezia-carnelos-wQ9VuP_Njr4-unsplash copy.jpg" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Iphone 13</h5>
-                          <p class="card-text">Coated with all that glitters is gold</p>
-                          <a href="#" class="btn btn-primary">Buy now</a>
-
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-3">
-                          <div class="card">
-                              <img src="images/homepage/lucrezia-carnelos-wQ9VuP_Njr4-unsplash copy.jpg" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Iphone 13</h5>
-                                <p class="card-text">Coated with all that glitters is gold</p>
-                                <a href="#" class="btn btn-primary">Buy now</a>
-
-                            </div>
-                          </div>
-                        </div>
-
+  <!--- Cards -->
+  <div class="container-fluid padding">
+      <div class="row padding">
+          <div class="col-md-4">
+              <div class="card">
+                  <img class="card-img-top" src="images/homepage/team1.png">
+                  <div class="card-body">
+                      <h4 class="card-title">Iphone 13</h4>
+                      <p class="card-text"> All that glitters is not gold. Buy an Iphone 13</p>
+                      <a href"#" class="btn btn-outline-secondary">Buy Now</a>
 
                   </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card">
+                  <img class="card-img-top" src="images/homepage/team2.png">
+                  <div class="card-body">
+                      <h4 class="card-title">Iphone 14</h4>
+                      <p class="card-text"> All that glitters is not silver</p>
+                      <a href"#" class="btn btn-outline-secondary">Buy Now</a>
 
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card">
+                  <img class="card-img-top" src="images/homepage/team2.png">
+                  <div class="card-body">
+                      <h4 class="card-title">Iphone 15</h4>
+                      <p class="card-text"> Iphone 15, the latest deal to never exist. Let's go.</p>
+                      <a href"#" class="btn btn-outline-secondary">Buy Now</a>
 
-
-                  <div class="row">
-                    <div class="col">
-                <div class="jumbotron bg-info text-center">
-
-                      <h1 class="display-4 text-light">Know our Mission.</h1>
-                      <p class="lead text-light">At Bevybuy, we care about our customers. Understand our mission, so we can deliver to you, better.</p>
-                      <a class="btn btn-light btn-lg" href="#" role="button">Know more</a>
-
-
-                    </div>
                   </div>
               </div>
           </div>
 
-                </div>
+      </div>
+  </div>
+
+  <!--- Two Column Section -->
+  <div class="container-fluid padding">
+      <div class="row padding">
+          <div class="col-md-12 col-lg-6">
+              <h4>Click the below link to find out more about us!</h4>
+               <br>
+              <a href="#" class="btn btn-primary">About Us</a>
+          </div>
+          <div class="col-lg-6">
+              <img src="images/homepage/bootstrap2.png" class="img-fluid">
+          </div>
+      </div>
+      <hr class="my-4">
+  </div>
+
+  <!--- Connect -->
+  <div class="container-fluid padding">
+      <div class=" row text-center padding">
+          <div class="col-12">
+              <h2>Connect</h2>
+          </div>
+          <div class="col-12 social padding">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+      </div>
+  </div>
+  </div>
+
+
+
+
 
   <!-- Start of Footer -->
 
