@@ -43,19 +43,21 @@ class ProductController {
      imageObj1, imageObj2, imageObj3
    ) {
 
-  ///////////////////////////////////
-      console.log('In the controller addItem itemName =',  itemName + ' description =', description + ' price =', price + ' discount =', discount + '
-      imageUrl1 =',
-      imageUrl1 +
-      ' imageUrl2 =',  imageUrl2 + ' imageUrl3 =', imageUrl3 + ' minQty =', minQty + ' offerPeriod =', offerPeriod +
-                                                  ' effectiveDate =', effectiveDate + ' organizer =', organizer + ' areaCode =', areaCode +
-                                                   ' delivery =', delivery + ' fullName =', fullName +
-                                                 ' sellerInfo =', sellerInfo + ' address1 =', address1 + ' address2 =', address2, + ' postalCode =',
-                                                 postalCode +
-                                                 ' email =', email + ' coDescription =', coDescription +
 
-                                                 ' referralCode =', referralCode +
-                                                 ' storeImage1 =', storeImage1 + ' storeImage2 =', storeImage2 + ' storeImage3', storeImage3);
+console.log("in the addItem");
+  ///////////////////////////////////
+//      console.log('In the controller addItem itemName =',  itemName + ' description =', description + ' price =', price + ' discount =', discount + '
+//      imageUrl1 =',
+//      imageUrl1 +
+//      ' imageUrl2 =',  imageUrl2 + ' imageUrl3 =', imageUrl3 + ' minQty =', minQty + ' offerPeriod =', offerPeriod +
+//                                                  ' effectiveDate =', effectiveDate + ' organizer =', organizer + ' areaCode =', areaCode +
+//                                                   ' delivery =', delivery + ' fullName =', fullName +
+//                                                 ' sellerInfo =', sellerInfo + ' address1 =', address1 + ' address2 =', address2, + ' postalCode =',
+//                                                 postalCode +
+//                                                 ' email =', email + ' coDescription =', coDescription +
+//
+//                                                 ' referralCode =', referralCode +
+//                                                 ' storeImage1 =', storeImage1 + ' storeImage2 =', storeImage2 + ' storeImage3', storeImage3);
 
   ////////////////////////////////////////
 
@@ -68,7 +70,7 @@ class ProductController {
      formData.append('discount', discount);
      formData.append('imageUrl1', imageUrl1);
      formData.append('imageUrl2', imageUrl2);
-     formData.append('imageUrl2', imageUrl3);
+     formData.append('imageUrl3', imageUrl3);
      formData.append('minQty', minQty);
      formData.append('offerPeriod', offerPeriod);
      formData.append('effectiveDate', effectiveDate);
@@ -89,16 +91,16 @@ class ProductController {
      formData.append('imageObj3', imageObj3);
 
 
-     fetch('http://localhost:8080/item/add', {
+     fetch('http://localhost:8081/item/add', {
        method: 'POST',
        body: formData
      })
        .then(response => response.json())
        .then(data => {
          console.log('sucess post', data)
-         alert("Item successfully added to the list")
+         //alert("Item successfully added to the list")
        })
-       .catch(alert("Failed to add the item to the list"))
+       .catch(e => console.log(e))
    }
 
 
@@ -109,18 +111,19 @@ class ProductController {
 
     //return statement instead on this._items
 
-//     let itemController = this;
-//     itemController._items = [];
-//
-//     fetch('http://localhost:8081/item/all')
-//       .then(response => response.json())
-//       .then(data => {
-//         console.log('print test fetch items', data);
-//         //todo check if data is in two array of objects. handle accordingly
-//         itemController._items.push(...data);
-//
-//       })
-//       .catch(e => console.log(e));
+     let itemController = this;
+     itemController._items = [];
+
+
+     fetch('http://localhost:8081/item/all')
+       .then(response => response.json())
+       .then(data => {
+         console.log('print test fetch items', data);
+         //todo check if data is in two array of objects. handle accordingly
+         itemController._items.push(...data);
+
+       })
+       .catch(e => console.log(e));
     //*********** added new part *******************/
 
     console.log("this._items", this._items)
