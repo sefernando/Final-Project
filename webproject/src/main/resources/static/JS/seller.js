@@ -353,4 +353,8 @@ const input3 = document.querySelector('#imageSeller3');
 input3.addEventListener('change', () => {
     storeImage3 = input3.files[0];
     console.log('storeImage3 :', storeImage3);
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 0f86cbf6cf9f078e3f278b11699d86e846ec1ed7
