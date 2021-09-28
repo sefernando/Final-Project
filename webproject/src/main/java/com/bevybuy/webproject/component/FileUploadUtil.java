@@ -17,15 +17,19 @@ public class FileUploadUtil {
 
         Path uploadPath = Paths.get(uploadDir);
 
-        try (InputStream inputStream = mpf1.getInputStream()) {
+        try (
+                InputStream inputStream1 = mpf1.getInputStream();
+                InputStream inputStream2 = mpf2.getInputStream();
+                InputStream inputStream3 = mpf3.getInputStream()
+        ) {
 
             Path filePath1 = uploadPath.resolve(fn1);
             Path filePath2 = uploadPath.resolve(fn2);
             Path filePath3 = uploadPath.resolve(fn3);
 
-            Files.copy(inputStream, filePath1, StandardCopyOption.REPLACE_EXISTING);
-            Files.copy(inputStream, filePath2, StandardCopyOption.REPLACE_EXISTING);
-            Files.copy(inputStream, filePath3, StandardCopyOption.REPLACE_EXISTING);
+            Files.copy(inputStream1, filePath1, StandardCopyOption.REPLACE_EXISTING);
+            Files.copy(inputStream2, filePath2, StandardCopyOption.REPLACE_EXISTING);
+            Files.copy(inputStream3, filePath3, StandardCopyOption.REPLACE_EXISTING);
 
         } catch (IOException ioe) {
             throw new IOException("Could not save one of the image files: " + fn1 + fn2 + fn3, ioe);

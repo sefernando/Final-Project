@@ -10,14 +10,18 @@ public class SellerDTO {
     private String email;
     private String comDescription;
     private String referralCode;
+    private String mobileNum;
 
-    public SellerDTO(String fullName, String sellerInfo, String address1, String address2, String postalCode, String email, String comDescription, String referralCode) {
+    public SellerDTO(String fullName, String sellerInfo, String address1, String address2,
+                     String postalCode, String email, String mobileNum, String comDescription,
+                     String referralCode) {
         this.fullName = fullName;
         this.sellerInfo = sellerInfo;
         this.address1 = address1;
         this.address2 = address2;
         this.postalCode = postalCode;
         this.email = email;
+        this.mobileNum = mobileNum;
         this.comDescription = comDescription;
         this.referralCode = referralCode;
     }
@@ -68,6 +72,14 @@ public class SellerDTO {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getMobileNum() {
+        return mobileNum;
+    }
+
+    public void setMobileNum(String mobileNum) {
+        this.mobileNum = mobileNum;
     }
 
     public String getComDescription() {

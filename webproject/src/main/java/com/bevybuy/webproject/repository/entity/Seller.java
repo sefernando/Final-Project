@@ -22,6 +22,7 @@ public class Seller {
     private String email;
     private String comDescription;
     private String referralCode;
+    private String mobileNum;
 
     public Seller() {}
 
@@ -32,6 +33,7 @@ public class Seller {
         this.address2 = sellerDTO.getAddress2();
         this.postalCode = sellerDTO.getPostalCode();
         this.email = sellerDTO.getEmail();
+        this.mobileNum = sellerDTO.getMobileNum();
         this.comDescription = sellerDTO.getComDescription();
         this.referralCode = sellerDTO.getReferralCode();
     }
@@ -103,6 +105,14 @@ public class Seller {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getMobileNum() {
+        return mobileNum;
+    }
+
+    public void setMobileNum(String mobileNum) {
+        this.mobileNum = mobileNum;
     }
 
     public String getComDescription() {

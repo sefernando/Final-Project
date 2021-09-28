@@ -289,10 +289,10 @@ Small devices (landscape phones, 576px and up) */
     /* margin-bottom: 30vh; */
   }
 
-        #myBtn {
+  #myBtn {
         border-radius: 50%;
-        bottom: 30vh;
+        bottom: 10vh;
         right: 30px;
-      }
+  }
 
 }

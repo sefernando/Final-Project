@@ -66,6 +66,7 @@ public class ProductController {
             @RequestParam(name="address2") String address2,
             @RequestParam(name="postalCode") String postalCode,
             @RequestParam(name="email") String email,
+            @RequestParam(name="mobileNum") String mobileNum,
             @RequestParam(name="comDescription") String comDescription,
             @RequestParam(name="referralCode") String referralCode,
 
@@ -84,7 +85,7 @@ public class ProductController {
         FileUploadUtil.saveFile(imageFolder, fileName1, fileName2, fileName3, mpf1, mpf2, mpf3);
 
 
-        SellerDTO sellerDTO = new SellerDTO(fullName, sellerInfo, address1, address2, postalCode, email, comDescription, referralCode);
+        SellerDTO sellerDTO = new SellerDTO(fullName, sellerInfo, address1, address2, postalCode, email, mobileNum, comDescription, referralCode);
         Seller seller = new Seller(sellerDTO);
 
         ProductDTO productDTO = new ProductDTO(itemName, description, price, discount, imageUrl1, imageUrl2,

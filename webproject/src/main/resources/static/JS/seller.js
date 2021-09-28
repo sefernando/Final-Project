@@ -158,43 +158,20 @@ formSeller.addEventListener('submit', (event) => {
 
 
 
-
-//    console.log('itemName =',  itemName + ' description =', description + ' price =', price + ' discount =', discount + ' imageUrl1 =', imageUrl1 +
-//    ' imageUrl2 =',  imageUrl2 + ' imageUrl3 =', imageUrl3 + ' minQty =', minQty + ' offerPeriod =', offerPeriod +
-//                                                ' effectiveDate =', effectiveDate + ' organizer =', organizer + ' areaCode =', areaCode +
-//                                                 ' delivery =', delivery + ' fullName =', fullName +
-//                                               ' sellerInfo =', sellerInfo + ' address1 =', address1 + ' address2 =', address2, + ' postalCode =',
-//                                               postalCode +
-//                                               ' email =', email + ' coDescription =', coDescription +
-//
-//                                               ' referralCode =', referralCode +
-//                                               ' storeImage1 =', storeImage1 + ' storeImage2 =', storeImage2 + ' storeImage3', storeImage3);
-
+/*
+    console.log('itemName =',  itemName + ' description =', description + ' price =', price + ' discount =', discount + ' imageUrl1 =', imageUrl1 + ' imageUrl2 =',  imageUrl2 + ' imageUrl3 =', imageUrl3 + ' minQty =', minQty + ' offerPeriod =', offerPeriod +
+                ' effectiveDate =', effectiveDate + ' organizer =', organizer + ' areaCode =', areaCode +  ' delivery =', delivery +
+                 ' fullName =', fullName + ' sellerInfo =', sellerInfo + ' address1 =', address1 + ' address2 =', address2, +
+                 ' postalCode =', postalCode + ' email =', email + ' coDescription =', coDescription +  ' referralCode =', referralCode +
+                  ' storeImage1 =', storeImage1 + ' storeImage2 =', storeImage2 + ' storeImage3', storeImage3);
+*/
 
     productController.addItem(itemName, description, price, discount,   imageUrl1, imageUrl2, imageUrl3, minQty,
                                offerPeriod, effectiveDate, organizer, areaCode, delivery, fullName,
-                               sellerInfo, address1, address2, postalCode, email, coDescription, referralCode,
+                               sellerInfo, address1, address2, postalCode, email, mobileNum, coDescription, referralCode,
                                storeImage1, storeImage2, storeImage3);
 
-
-
-  //addItem(itemName, description, price, discount, imageUrl1, imageUrl2, imageUrl3,
-  //   minQty, offerPeriod, effectiveDate, organizer, areaCode, delivery, fullName,
-  //   sellerInfo, address1, address2, postalCode, email, comDescription, referralCode,
-  //   imageObj1, imageObj2, imageObj3
-  // )
-
     console.log("Form is submitted");
-
-
-    //addItem(itemName, description, price, discount, imageUrl1, imageUrl2, imageUrl3,
-      //   minQty, offerPeriod, effectiveDate, organizer, areaCode, delivery, fullName,
-      //   sellerInfo, address1, address2, postalCode, email, comDescription, referralCode,
-      //   imageObj1, imageObj2, imageObj3
-      // )
-
-
-
 
     inputName.value = '';
     inputCompany.value = '';
@@ -221,19 +198,12 @@ formSeller.addEventListener('submit', (event) => {
     deliveryServices.value = '';
     document.querySelector("#radio_agree").checked = false;
 
+    //redirecting to complete registration page
+    window.location.href="seller_completeReg.html";
 
+    return true;
 
-        //#what about the data on company?
-
-        //alert('Form Successfully Submitted');
-        //window.location.replace("/seller_completeReg")
-        return true;
-
-        //productControl.addToList(fullName, company, address, addressUnit, addressPostal, email, mobileNum,
-        //itemCategory, itemDescription, listPrice, GroupDiscount, minQty, offerPeriod, effectiveDate, CommunityOrgz,
-//        referralCode, CompanyDescription, selectArea, deliveryServices, imagesSeller1, imagesSeller2, imagesSeller3, itemValue);
 });
-
 //#######end of addForm########/
 
 
@@ -245,95 +215,17 @@ function checkWeeks(inputOfferPeriod) {
     }
 };
 
-
 function validateItemDropDown() {
     return (document.querySelector("#inputItemCategory").selectedIndex === 0) ? false : true;
 }
-
 
 function validateDeliveryDropDown() {
     return (document.querySelector("#deliveryServices").selectedIndex === 0) ? false : true;
 }
 
-
-
 function validateAreaDropDown() {
     return (document.querySelector("#area").selectedIndex === 0) ? false : true;
 }
-
-
-//function addToList(name, company, address, addressUnit, addressPostal, email, mobileNum, itemCategory, itemDescription, listPrice, GroupDiscount, minQty, offerPeriod, effectiveDate, CommunityOrgz, referralCode, CompanyDescription, selectArea, deliveryServices, imagesSeller1, imagesSeller2, imagesSeller3, itemValue) {
-//    function addToList(fullname, sellerInfo, address1, address2, postalCode, email, mobileNum, referralCode, coDescription,itemName, description,price,discount,imageUrl1,imageUrl2,imageUrl3,minQty,offerPeriod,effectiveDate,organizer,areaCode,delivery)
-//       {
-//
-//    const item = {
-//        name: name,
-//        company: company,
-//        address: address,
-//        addressUnit: addressUnit,
-//        addressPostal: addressPostal,
-//        email: email,
-//        mobileNum: mobileNum,
-//        itemCategory: itemCategory,
-//        itemDescription: itemDescription,
-//        listPrice: listPrice,
-//        GroupDiscount: GroupDiscount,
-//        minQty: minQty,
-//        offerPeriod: offerPeriod,
-//        effectiveDate: effectiveDate,
-//        CommunityOrgz: CommunityOrgz,
-//        referralCode: referralCode,
-//        CompanyDescription: CompanyDescription,
-//        itemValue: itemValue,
-//        selectArea: selectArea,
-//        deliveryService: deliveryServices,
-//        imagesSeller1: imagesSeller1,
-//        imagesSeller2: imagesSeller2,
-//        imagesSeller3: imagesSeller3
-//    };
-//
-//    formList.push(item);
-//
-//    console.log('in the add to list');
-//
-//
-//    clearForm();
-//
-//    console.log(`Total submission: ${formList.length}: `, formList);
-//    console.log(item);
-//}
-
-
-
-
-//##comment out 27SEP##//
-// function clearForm() {
-//     const name = document.querySelector("#inputName").value = "";
-//     const company = document.querySelector("#inputCompany").value = "";
-//     const address = document.querySelector("#inputAddr").value = "";
-//     const addressUnit = document.querySelector("#inputAddrUnit").value = "";
-//     const addressPostal = document.querySelector("#inputAddrPostal").value = "";
-//     const email = document.querySelector("#inputEmail").value = "";
-//     const mobileNum = document.querySelector("#inputMobileNum").value = "";
-//     const itemCategory = document.querySelector("#inputItemCategory").value = "Select";
-//     const itemDescription = document.querySelector("#inputItemDescription").value = "";
-//     const listPrice = document.querySelector("#inputListPrice").value = "";
-//     const GroupDiscount = document.querySelector("#inputGroupDiscount").value = "";
-//     const imagesSeller1 = document.getElementById("imageSeller1").value = "";
-//     const imagesSeller2 = document.getElementById("imageSeller2").value = "";
-//     const imagesSeller3 = document.getElementById("imageSeller3").value = "";
-//     const minQty = document.querySelector("#inputMinQty").value = "";
-//     const offerPeriod = document.querySelector("#inputOfferPeriod").value = "";
-//     const effectiveDate = document.querySelector("#inputEffectiveDate").value = "";
-//     const CommunityOrgz = document.querySelector("#inputCommunityOrgz").value = "";
-//     const referralCode = document.querySelector("#inputReferralCode").value = "";
-//     const CompanyDescription = document.querySelector("#inputCompanyDescription").value = "";
-//     const selectArea = document.querySelector("#area").selectedIndex = 0;
-//     const deliveryService = document.querySelector("#deliveryServices").selectedIndex = 0;
-//     const itemValue = document.querySelector("#inputItemCategory").selectedIndex = 0;
-
-//     document.querySelector("#radio_agree").checked = false;
-// };
 
 
 //##Added 27Sep
