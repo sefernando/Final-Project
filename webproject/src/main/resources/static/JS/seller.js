@@ -19,6 +19,7 @@ document.querySelector("#inputCompanyDescription").value = "Tan Ah Kow is a fake
 //**TO DELETE BLOCK ABOVE *//
 
 //##ADDED 27SEP##//
+
 const productController = new ProductController();
 let storeImage1 = ""
 let storeImage2 = ""
@@ -156,24 +157,26 @@ formSeller.addEventListener('submit', (event) => {
 
 
 
-console.log('itemName =',  itemName, 'description =', description )
-
-    console.log('itemName =',  itemName + ' description =', description + ' price =', price + ' discount =', discount + ' imageUrl1 =', imageUrl1 +
-    ' imageUrl2 =',  imageUrl2 + ' imageUrl3 =', imageUrl3 + ' minQty =', minQty + ' offerPeriod =', offerPeriod +
-                                                ' effectiveDate =', effectiveDate + ' organizer =', organizer + ' areaCode =', areaCode +
-                                                 ' delivery =', delivery + ' fullName =', fullName +
-                                               ' sellerInfo =', sellerInfo + ' address1 =', address1 + ' address2 =', address2, + ' postalCode =',
-                                               postalCode +
-                                               ' email =', email + ' coDescription =', coDescription +
-
-                                               ' referralCode =', referralCode +
-                                               ' storeImage1 =', storeImage1 + ' storeImage2 =', storeImage2 + ' storeImage3', storeImage3);
 
 
-//    productController.addItem(itemName, description, price, discount,   imageUrl1, imageUrl2, imageUrl3, minQty,
-//                               offerPeriod, effectiveDate, organizer, areaCode, delivery, fullName,
-//                               sellerInfo, address1, address2, postalCode, email, coDescription, referralCode,
-//                               storeImage1, storeImage2, storeImage3)
+//    console.log('itemName =',  itemName + ' description =', description + ' price =', price + ' discount =', discount + ' imageUrl1 =', imageUrl1 +
+//    ' imageUrl2 =',  imageUrl2 + ' imageUrl3 =', imageUrl3 + ' minQty =', minQty + ' offerPeriod =', offerPeriod +
+//                                                ' effectiveDate =', effectiveDate + ' organizer =', organizer + ' areaCode =', areaCode +
+//                                                 ' delivery =', delivery + ' fullName =', fullName +
+//                                               ' sellerInfo =', sellerInfo + ' address1 =', address1 + ' address2 =', address2, + ' postalCode =',
+//                                               postalCode +
+//                                               ' email =', email + ' coDescription =', coDescription +
+//
+//                                               ' referralCode =', referralCode +
+//                                               ' storeImage1 =', storeImage1 + ' storeImage2 =', storeImage2 + ' storeImage3', storeImage3);
+
+
+    productController.addItem(itemName, description, price, discount,   imageUrl1, imageUrl2, imageUrl3, minQty,
+                               offerPeriod, effectiveDate, organizer, areaCode, delivery, fullName,
+                               sellerInfo, address1, address2, postalCode, email, coDescription, referralCode,
+                               storeImage1, storeImage2, storeImage3);
+
+
 
   //addItem(itemName, description, price, discount, imageUrl1, imageUrl2, imageUrl3,
   //   minQty, offerPeriod, effectiveDate, organizer, areaCode, delivery, fullName,
@@ -337,18 +340,17 @@ function validateAreaDropDown() {
 const input = document.querySelector('#imageSeller1');
 input.addEventListener('change', () => {
     storeImage1 = input.files[0];
-    console.log(storeImage1);
+    console.log('storeImage1 :', storeImage1);
 });
 
 const input2 = document.querySelector('#imageSeller2');
 input2.addEventListener('change', () => {
-    storeImage2 = input.files[0];
-    console.log(storeImage2);
+    storeImage2 = input2.files[0];
+    console.log('storeImage2 :', storeImage2);
 });
 
 const input3 = document.querySelector('#imageSeller3');
 input3.addEventListener('change', () => {
-    storeImage3 = input.files[0];
-    console.log(storeImage3);
+    storeImage3 = input3.files[0];
+    console.log('storeImage3 :', storeImage3);
 });
-
