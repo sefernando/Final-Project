@@ -16,14 +16,24 @@
 
     <div class="container">
         <div class="row">
+
             <div class="col-md-6 align-self-center">
                 <!-- Content -->
-                <h1>Become our Partner.</h1>
-                <h1>Join us as Community Organizers or Sellers.</h1>
-                <h3>Spread the joy!</h3>
-                <button a href="/seller_reg.html" type="button" class="btn btn-primary w-75">Register as Seller</button> <br><br>
-                <button type="button" class="btn btn-primary w-75">Register as Community Organizer</button>
+                <br>
+                <h3 class="shadow-lg p-3 mb-5 bg-white rounded text-center">BE OUR PARTNER TODAY</h3>
+
+
+                <h3>Join us as a seller</h3>
+                <h6>A seller supplies products in bulk to community groups. Join us now to boost your market reach and take advantage of economies of scale! </h6>
+                <a th:href="@{seller_reg}" target="_blank" class="btn btn-primary w-75">Register as Seller!</a>
+                <br><br>
+
+                <h3>Join us as a community organizer</h3>
+                <h6>A community organizer is the host of a GroupBuy group for a particular product. The host collates orders and serves as the main point of contact for product delivery. </h6>
+                <a href="#" class="btn btn-primary w-75">Register as Community Organizer!</a>
+                <!-- <button type="button" class="btn btn-primary w-75">Register as Community Organizer</button> -->
             </div>
+
             <div class="col-md-6">
                 <!-- Carousell -->
                 <div id="carouselTestimonials" class="carousel slide" data-ride="carousel">
@@ -31,6 +41,7 @@
                         <li data-target="#carouselTestimonials" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselTestimonials" data-slide-to="1" class=""></li>
                     </ol>
+
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <img class="d-block img-fluid" src="images/iphone11.png" alt="imageSeller1">
@@ -39,6 +50,7 @@
                             <img class="d-block img-fluid" src="images/iphone12.png" alt="imageSeller2">
                         </div>
                     </div>
+
                     <a class="carousel-control-prev" href="#carouselTestimonials" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
@@ -49,6 +61,7 @@
                     </a>
                 </div>
             </div>
+
             <div class="row justify-content-center align-self-center">
             <img src="images/img.seller1.howitworks.001.jpeg" class="img-fluid">
             </div>
@@ -59,43 +72,41 @@
                     <tbody>
                         <tr>
                             <th scope="row"></th>
-                            <td>Is this where I can ask questions?</td>
-                            <td>Yes, exactly where you can find questions that many people have asked or common questions people might have. One day I'm definitely going to use this Bootstrap media object component into my application</td>
+                            <td class="font-weight-bold">What is GroupBuy?</td>
+                            <td>GroupBuys are consolidated bulk purchases of products, involving consumers in the same district coming together to place orders. Upon the product receiving a minimum number of orders, consumers will be able to purchase the item at a discounted price. </td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
-                            <td>Why is Bootstrap so inefficient?</td>
-                            <td>Yes, exactly where you can find questions that many people have asked or common questions people might have. One day I'm definitely going to use this Bootstrap media object component into my application</td>
+                            <td class="font-weight-bold">What are the benefits of GroupBuy?</td>
+                            <td>The GroupBuy model reduces cost and improves efficiency due to economies of scale, providing sellers with competitive advantage. GroupBuys typically receive a large number of orders, allowing sellers to take advantage of bulk purchases to lower the price of products. <br>
+                                In addition, by providing the option for pickup or delivery to a centralized location, GroupBuy enables sellers to significantly reduce delivery cost and time.</td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
-                            <td>Where do I go for a nap?</td>
-                            <td>Yes, exactly where you can find questions that many people have asked or common questions people might have. One day I'm definitely going to use this Bootstrap media object component into my application</td>
+                            <td class="font-weight-bold">As a seller, what delivery services do I need to provide?</td>
+                            <td>There are 3 options available for your mode of delivery: <br>
+                                1. Delivery to individual buyers. <br>
+                                2. Deliver to community organizer or central location. <br>
+                                3. Pick up by the individual buyer or community organizer. </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td class="font-weight-bold">How do I become a seller on GroupBuy?</td>
+                            <td>
+                                <a th:href="@{seller_info}" target="_blank" class="font-weight-bold">Simple click on this link to Register as Seller!</a>
+                            </td>
                         </tr> <br><br>
                         <th scope="row"></th>
                         <td></td>
                         <td></td>
                         </tr>
                     </tbody>
-            </table>
+                </table>
+            </div>
+
+
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
