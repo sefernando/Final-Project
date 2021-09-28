@@ -28,6 +28,7 @@ public class ProductController {
         this.productService = productService;
     }
 
+
     @CrossOrigin
     @GetMapping("/all")
     public Iterable<Product> getProducts(){

@@ -92,22 +92,22 @@ class ProductController {
 
     //return statement instead on this._items
 
-     let itemController = this;
-     itemController._items = [];
-
-     fetch('http://localhost:8081/item/all')
-       .then(response => response.json())
-       .then(data => {
-         console.log('print test fetch items', data);
-         //todo check if data is in two array of objects. handle accordingly
-         itemController._items.push(...data);
-
-       })
-       .catch(e => console.log(e));
+//     let itemController = this;
+//     itemController._items = [];
+//
+//     fetch('http://localhost:8081/item/all')
+//       .then(response => response.json())
+//       .then(data => {
+//         console.log('print test fetch items', data);
+//         //todo check if data is in two array of objects. handle accordingly
+//         itemController._items.push(...data);
+//
+//       })
+//       .catch(e => console.log(e));
     //*********** added new part *******************/
 
     console.log("this._items", this._items)
-    return this._items //.filter(item => item.areaCode === districtCode);
+    return this._items.filter(item => item.areaCode === districtCode);
   }
 
 
