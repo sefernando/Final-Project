@@ -21,7 +21,7 @@ public class Seller {
     private String postalCode;
     private String email;
     private String comDescription;
-    private String referralCode;
+    //private String referralCode;
     private String mobileNum;
 
     public Seller() {}
@@ -35,7 +35,7 @@ public class Seller {
         this.email = sellerDTO.getEmail();
         this.mobileNum = sellerDTO.getMobileNum();
         this.comDescription = sellerDTO.getComDescription();
-        this.referralCode = sellerDTO.getReferralCode();
+        //this.referralCode = sellerDTO.getReferralCode();
     }
 
     //PRODUCT Mapping
@@ -123,13 +123,13 @@ public class Seller {
         this.comDescription = comDescription;
     }
 
-    public String getReferralCode() {
-        return referralCode;
-    }
-
-    public void setReferralCode(String referralCode) {
-        this.referralCode = referralCode;
-    }
+//    public String getReferralCode() {
+//        return referralCode;
+//    }
+//
+//    public void setReferralCode(String referralCode) {
+//        this.referralCode = referralCode;
+//    }
 
     @Override
     public String toString() {
@@ -142,7 +142,7 @@ public class Seller {
                 ", postalCode='" + postalCode + '\'' +
                 ", email='" + email + '\'' +
                 ", comDescription='" + comDescription + '\'' +
-                ", referralCode='" + referralCode + '\'' +
+                //", referralCode='" + referralCode + '\'' +
                 '}';
     }
 }

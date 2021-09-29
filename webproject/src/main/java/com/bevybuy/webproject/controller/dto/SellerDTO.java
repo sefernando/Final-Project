@@ -9,12 +9,12 @@ public class SellerDTO {
     private String postalCode;
     private String email;
     private String comDescription;
-    private String referralCode;
+    //private String referralCode;
     private String mobileNum;
 
     public SellerDTO(String fullName, String sellerInfo, String address1, String address2,
-                     String postalCode, String email, String mobileNum, String comDescription,
-                     String referralCode) {
+                     String postalCode, String email, String mobileNum, String comDescription
+    ) {
         this.fullName = fullName;
         this.sellerInfo = sellerInfo;
         this.address1 = address1;
@@ -23,7 +23,7 @@ public class SellerDTO {
         this.email = email;
         this.mobileNum = mobileNum;
         this.comDescription = comDescription;
-        this.referralCode = referralCode;
+        //this.referralCode = referralCode;
     }
 
     public String getFullName() {
@@ -90,11 +90,11 @@ public class SellerDTO {
         this.comDescription = comDescription;
     }
 
-    public String getReferralCode() {
-        return referralCode;
-    }
-
-    public void setReferralCode(String referralCode) {
-        this.referralCode = referralCode;
-    }
+//    public String getReferralCode() {
+//        return referralCode;
+//    }
+//
+//    public void setReferralCode(String referralCode) {
+//        this.referralCode = referralCode;
+//    }
 }

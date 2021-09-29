@@ -13,7 +13,7 @@ document.querySelector("#inputListPrice").value = "2000";
 document.querySelector("#inputGroupDiscount").value = "15";
 document.querySelector("#inputMinQty").value = "100";
 document.querySelector("#inputOfferPeriod").value = "3";
-document.querySelector("#inputReferralCode").value = "1806123";
+//document.querySelector("#inputReferralCode").value = "1806123";
 document.querySelector("#inputCommunityOrgz").value = "1920765";
 document.querySelector("#inputCompanyDescription").value = "Tan Ah Kow is a fake company";
 //**TO DELETE BLOCK ABOVE *//
@@ -54,10 +54,13 @@ formSeller.addEventListener('submit', (event) => {
     const inputOfferPeriod = document.querySelector('#inputOfferPeriod');
     const inputEffectiveDate = document.querySelector('#inputEffectiveDate');
     const inputCommunityOrgz = document.querySelector('#inputCommunityOrgz');
-    const inputReferralCode = document.querySelector('#inputReferralCode');
+    //const inputReferralCode = document.querySelector('#inputReferralCode');
     const inputCompanyDescription = document.querySelector('#inputCompanyDescription');
     const area = document.querySelector('#area');
     const deliveryServices = document.querySelector('#deliveryServices');
+//    Fernando added
+    const productModelNode = document.querySelector('#productModel');
+
 
 
 
@@ -138,7 +141,7 @@ formSeller.addEventListener('submit', (event) => {
     const postalCode = inputAddrPostal.value;
     const email = inputEmail.value;
     const mobileNum = inputMobileNum.value;
-    const referralCode = inputReferralCode.value;
+    //const referralCode = inputReferralCode.value;
     const coDescription = inputCompanyDescription.value;
 
     const itemName = inputItemCategory.value;
@@ -154,21 +157,19 @@ formSeller.addEventListener('submit', (event) => {
     const organizer = inputCommunityOrgz.value;
     const areaCode = area.value;
     const delivery = deliveryServices.value;
-
-
-
+    const productModel = productModelNode.value;
 
 /*
     console.log('itemName =',  itemName + ' description =', description + ' price =', price + ' discount =', discount + ' imageUrl1 =', imageUrl1 + ' imageUrl2 =',  imageUrl2 + ' imageUrl3 =', imageUrl3 + ' minQty =', minQty + ' offerPeriod =', offerPeriod +
                 ' effectiveDate =', effectiveDate + ' organizer =', organizer + ' areaCode =', areaCode +  ' delivery =', delivery +
                  ' fullName =', fullName + ' sellerInfo =', sellerInfo + ' address1 =', address1 + ' address2 =', address2, +
-                 ' postalCode =', postalCode + ' email =', email + ' coDescription =', coDescription +  ' referralCode =', referralCode +
+                 ' postalCode =', postalCode + ' email =', email + ' coDescription =', coDescription +
                   ' storeImage1 =', storeImage1 + ' storeImage2 =', storeImage2 + ' storeImage3', storeImage3);
 */
 
-    productController.addItem(itemName, description, price, discount,   imageUrl1, imageUrl2, imageUrl3, minQty,
+    productController.addItem(itemName, description, productModel, price, discount,   imageUrl1, imageUrl2, imageUrl3, minQty,
                                offerPeriod, effectiveDate, organizer, areaCode, delivery, fullName,
-                               sellerInfo, address1, address2, postalCode, email, mobileNum, coDescription, referralCode,
+                               sellerInfo, address1, address2, postalCode, email, mobileNum, coDescription,
                                storeImage1, storeImage2, storeImage3);
 
     console.log("Form is submitted");
@@ -191,7 +192,8 @@ formSeller.addEventListener('submit', (event) => {
     inputOfferPeriod.value = '';
     inputEffectiveDate.value = '';
     inputCommunityOrgz.value = '';
-    inputReferralCode.value = '';
+    //inputReferralCode.value = '';
+    productModelNode.value = '';
     inputCompanyDescription.value = '';
     inputItemCategory.value = '';
     area.value = '';

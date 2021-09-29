@@ -17,13 +17,16 @@ public class ProductDTO {
     private String organizer;
     private String areaCode;    //area;
     private String delivery;    //deliveryServices;
+    private String productModel;
 
     private Seller seller;
 
-    public ProductDTO(String itemName, String description, Double price, Double discount, String imageUrl1, String imageUrl2, String imageUrl3,
+    public ProductDTO(String itemName, String description, String productModel, Double price, Double discount, String imageUrl1, String imageUrl2,
+                      String imageUrl3,
                       Integer minQty, Integer offerPeriod, String effectiveDate, String organizer, String areaCode, String delivery, Seller seller) {
         this.itemName = itemName;
         this.description = description;
+        this.productModel = productModel;
         this.price = price;
         this.discount = discount;
         this.imageUrl1 = imageUrl1;
@@ -53,6 +56,14 @@ public class ProductDTO {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getProductModel() {
+        return productModel;
+    }
+
+    public void setProductModel(String productModel) {
+        this.productModel = productModel;
     }
 
     public Double getPrice() {

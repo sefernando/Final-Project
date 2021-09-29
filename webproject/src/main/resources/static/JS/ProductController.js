@@ -14,7 +14,7 @@ const createHTMLCard = (linkID, item, expireDay, sellingPrice) => `
           alt="..."
         />
         <div class="card-body">
-          <h5 class="card-title">${item.itemName}</h5>
+          <h5 class="card-title">${item.productModel}</h5>
           <p class="card-text">${item.description}</p>
           <a
             id="${linkID}"
@@ -71,6 +71,7 @@ class ProductController {
   addItem(
     itemName,
     description,
+    productModel,
     price,
     discount,
     imageUrl1,
@@ -90,7 +91,7 @@ class ProductController {
     email,
     mobileNum,
     comDescription,
-    referralCode,
+    //referralCode,
     imageObj1,
     imageObj2,
     imageObj3
@@ -100,6 +101,7 @@ class ProductController {
 
     formData.append("itemName", itemName);
     formData.append("description", description);
+    formData.append("productModel", productModel);
     formData.append("price", price);
     formData.append("discount", discount);
     formData.append("imageUrl1", imageUrl1);
@@ -119,7 +121,7 @@ class ProductController {
     formData.append("email", email);
     formData.append("mobileNum", mobileNum);
     formData.append("comDescription", comDescription);
-    formData.append("referralCode", referralCode);
+    //formData.append("referralCode", referralCode);
     //3 image files
     formData.append("imageObj1", imageObj1);
     formData.append("imageObj2", imageObj2);

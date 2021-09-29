@@ -47,6 +47,7 @@ public class ProductController {
             // PRODUCT INFO
             @RequestParam(name="itemName") String itemName,
             @RequestParam(name="description") String description,
+            @RequestParam(name="productModel") String productModel,
             @RequestParam(name="price") Double price,
             @RequestParam(name="discount") Double discount,
             @RequestParam(name="imageUrl1") String imageUrl1,
@@ -68,7 +69,7 @@ public class ProductController {
             @RequestParam(name="email") String email,
             @RequestParam(name="mobileNum") String mobileNum,
             @RequestParam(name="comDescription") String comDescription,
-            @RequestParam(name="referralCode") String referralCode,
+            //@RequestParam(name="referralCode") String referralCode,
 
             //Images
             @RequestParam("imageObj1") MultipartFile mpf1,
@@ -85,10 +86,10 @@ public class ProductController {
         FileUploadUtil.saveFile(imageFolder, fileName1, fileName2, fileName3, mpf1, mpf2, mpf3);
 
 
-        SellerDTO sellerDTO = new SellerDTO(fullName, sellerInfo, address1, address2, postalCode, email, mobileNum, comDescription, referralCode);
+        SellerDTO sellerDTO = new SellerDTO(fullName, sellerInfo, address1, address2, postalCode, email, mobileNum, comDescription);
         Seller seller = new Seller(sellerDTO);
 
-        ProductDTO productDTO = new ProductDTO(itemName, description, price, discount, imageUrl1, imageUrl2,
+        ProductDTO productDTO = new ProductDTO(itemName, description, productModel, price, discount, imageUrl1, imageUrl2,
                                     imageUrl3, minQty, offerPeriod, effectiveDate, organizer, areaCode, delivery, seller);
 
         Product productResponse = productService.save(new Product(productDTO, seller));

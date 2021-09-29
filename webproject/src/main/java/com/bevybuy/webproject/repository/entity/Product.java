@@ -14,6 +14,7 @@ public class Product {
 
     private String itemName;    //itemCategory;
     private String description; //itemDescription;
+    private String productModel;
     private Double price;
     private Double discount;
     private String imageUrl1;
@@ -25,6 +26,7 @@ public class Product {
     private String organizer;
     private String areaCode;    //area;
     private String delivery;    //deliveryServices;
+
 
 
     //SELLER MAPPING
@@ -63,6 +65,7 @@ public class Product {
     public Product(ProductDTO productDTO, Seller seller) {
         this.itemName = productDTO.getItemName();
         this.description = productDTO.getDescription();
+        this.productModel = productDTO.getProductModel();
         this.price = productDTO.getPrice();
         this.discount = productDTO.getDiscount();
         this.imageUrl1 = productDTO.getImageUrl1();
@@ -95,6 +98,14 @@ public class Product {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getProductModel() {
+        return productModel;
+    }
+
+    public void setProductModel(String productModel) {
+        this.productModel = productModel;
     }
 
     public void setDescription(String description) {
@@ -195,6 +206,7 @@ public class Product {
                 "productId=" + productId +
                 ", itemName='" + itemName + '\'' +
                 ", description='" + description + '\'' +
+                ", productModel='" + productModel + '\'' +
                 ", price=" + price +
                 ", discount=" + discount +
                 ", imageUrl1='" + imageUrl1 + '\'' +
