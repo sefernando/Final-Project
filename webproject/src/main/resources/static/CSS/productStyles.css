@@ -1,7 +1,9 @@
-Body{
+body{
   /* height: 100vh; */
   background-color: white;
+  margin-bottom: -2250px;
 }
+
 
 :root{
    --BevyBuy-purple: #B042B4;
@@ -294,5 +296,7 @@ Small devices (landscape phones, 576px and up) */
         bottom: 10vh;
         right: 30px;
   }
+
+
 
 }

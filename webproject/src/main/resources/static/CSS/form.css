@@ -1,3 +1,9 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin-bottom: -2250px;
+  }
+
 .btn-primary {
             background-color: #b042b4;
             border-color: grey;
