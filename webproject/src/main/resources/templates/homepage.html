@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,7 +43,7 @@
 
 
   <!--- Image Slider -->
-  <div id="slides" class="carousel slide" data-ride-carousel>
+  <div id="slides" class="carousel slide" data-ride="carousel" data-ride-carousel>
       <ul class="carousel-indicators">
           <li data-target="#slides" data-slide-to="0" class="active"></li>
           <li data-target="#slides" data-slide-to="1"></li>
@@ -132,11 +132,11 @@
       <div class="row padding">
           <div class="col-md-4">
               <div class="card">
-                  <img class="card-img-top" src="images/homepage/yellowphone.jpg">
+                  <img class="card-img-top" src="images/homepage/Food111.jpg">
                   <div class="card-body">
-                      <h4 class="card-title">Yellow Rotary Phone</h4>
-                      <p class="card-text"> Retro elegant shape. Adjustable volume. </p>
-                      <a href"#" class="btn btn-outline-secondary">Buy Now</a>
+                      <h4 class="card-title">Sushi Platter</h4>
+                      <p class="card-text"> Salmon Belly, Tuna and more </p>
+                      <a id="learnMoreID" th:href="@{products}" class="btn btn-outline-secondary text-white">Learn More</a>
 
                   </div>
               </div>
@@ -147,7 +147,7 @@
                   <div class="card-body">
                       <h4 class="card-title">Ipad Mini</h4>
                       <p class="card-text"> 11-inch (diagonal) LED-backlit </p>
-                      <a href"#" class="btn btn-outline-secondary">Buy Now</a>
+                      <a id="learnMoreID" th:href="@{products}" class="btn btn-outline-secondary text-white">Learn More</a>
 
                   </div>
               </div>
@@ -158,7 +158,7 @@
                   <div class="card-body">
                       <h4 class="card-title">Iphone 15</h4>
                       <p class="card-text"> 100X zoom camera. Fast speed with 5G.</p>
-                      <a href"#" class="btn btn-outline-secondary">Buy Now</a>
+                      <a id="learnMoreID" th:href="@{products}" class="btn btn-outline-secondary text-white">Learn More</a>
 
                   </div>
               </div>
@@ -173,7 +173,7 @@
           <div class="col-md-12 col-lg-6">
               <h5>Click below to know more about us.</h5>
                <br>
-              <a href="#" class="btn btn-primary">About Us</a>
+              <a th:href="@{aboutus}" class="btn btn-primary">About Us</a>
           </div>
           <div class="col-lg-6">
               <img src="images/homepage/AboutUsLaptop.jpg" class="img-fluid">
